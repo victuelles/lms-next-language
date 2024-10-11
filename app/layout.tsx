@@ -8,6 +8,7 @@ import {
   UserButton
 } from '@clerk/nextjs'
 import "./globals.css";
+import ToastProvider from "@/components/providers/toaster-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,12 +51,7 @@ export default function RootLayout({
         }}
       >
       <body  className={`min-h-screen flex flex-col antialiased`}>
-        {/* <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn> */}
+        <ToastProvider/>
         {children}
       </body>
       </ClerkProvider>
