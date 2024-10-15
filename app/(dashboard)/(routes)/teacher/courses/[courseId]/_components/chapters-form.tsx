@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { Chapter, Course } from "@prisma/client";
 import { Input } from "@/components/ui/input";
 import ChaptersList from "./chapters-list";
+import { list } from "postcss";
 
 interface ChaptersFormProps {
   initialData: Course &{chapters:Chapter[]};
@@ -61,6 +62,23 @@ export const ChaptersForm = ({
       toast.error("Something went wrong.");
     }
   };
+
+  const onReorder= async(updateData:{id:string; position:number}[])=>{
+    try {
+      setIsUpdating(true)
+      await axios.put(`/api/courses/${courseId}/chapters/reorder`,{
+        list:updateData
+      })
+
+      toast.success("Chapters reordered")
+      router.refresh()
+    } catch (error) {
+      toast.error("Something went wrong")
+      
+    }finally{
+      setIsUpdating(false)
+    }
+  }
 
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
@@ -115,7 +133,7 @@ export const ChaptersForm = ({
           {!initialData.chapters.length && "No Chapters"}
           <ChaptersList
           onEdit={()=>{}}
-          onReorder={()=>{}}
+          onReorder={onReorder}
           items={initialData.chapters || []}/>
           </div>
       )}
