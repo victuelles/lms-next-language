@@ -58,7 +58,7 @@ export async function DELETE(
       if (existingMuxData) {
       
         try {
-          await mux.video.assets.del(existingMuxData.assetId);
+          await mux.video.assets.delete(existingMuxData.assetId);
         } catch (error) {
           console.log("[Mux asset delete]", error);
         }
@@ -146,7 +146,7 @@ export async function PATCH(
 
       if (existingMuxData) {
         try {
-          await mux.video.assets.del(existingMuxData.assetId);
+          await mux.video.assets.delete(existingMuxData.assetId);
         } catch (error) {
           console.log("[Mux asset delete]", error);
         }

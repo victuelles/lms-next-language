@@ -5,6 +5,8 @@ import {
 } from '@clerk/nextjs'
 import "./globals.css";
 import ToastProvider from "@/components/providers/toaster-provider";
+import { ConfettiProvider } from "@/components/providers/confetti-provider";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,6 +49,7 @@ export default function RootLayout({
         }}
       >
       <body  className={`min-h-screen flex flex-col antialiased`}>
+        <ConfettiProvider/>
         <ToastProvider/>
         {children}
       </body>
