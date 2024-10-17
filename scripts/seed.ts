@@ -14,30 +14,30 @@ async function main(){
 
         await database.category.createMany({
             data:[
-                {name:"Tagalog"},
-                {name:"Pangasina"},
-                {name:"Ilocano"},
-                {name:"Bisaya"},
-                {name:"Ilonggo"},
-                {name:"Kapampangan"},
-                {name:"Bicolano"},
+                {name:"Computer Science"},
+                {name:"Music"},
+                {name:"Fitness"},
+                {name:"Photography"},
+                {name:"Accounting"},
+                {name:"Engineering"},
+                {name:"Filming"},
             ]
         })
 
-        await database.course.createMany({
-            data:[
-                {title:"Tagalog- Basic",
-                description:"Basic day to day terms ",
-                imageUrl:"https://utfs.io/f/TCTFDrU70C5YtWbaxr9k6eJi9gfPcQ2hCNw8obEI1M4qWTpZ",
+        // await database.course.createMany({
+        //     data:[
+        //         {title:"Tagalog- Basic",
+        //         description:"Basic day to day terms ",
+        //         imageUrl:"https://utfs.io/f/TCTFDrU70C5YtWbaxr9k6eJi9gfPcQ2hCNw8obEI1M4qWTpZ",
 
 
-                }
+        //         }
                 
-            ]
-        })
+        //     ]
+        // })
         console.log("Success...")
     } catch (error) {
-        console.log("Error seddint the database categories ...")
+        console.log("Error seeding the database categories and courses ...",error)
         
     }finally{
         await database.$disconnect()
