@@ -12,13 +12,14 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+
 import { Button } from "@/components/ui/button";
 import { Pencil } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
+ 
 import { Course } from "@prisma/client";
 import { Combobox } from "@/components/ui/combobox";
 
@@ -103,7 +104,9 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox options={...options} {...field} />
+                    <Combobox options={...options} 
+                    disabled={isSubmitting}
+                    {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
