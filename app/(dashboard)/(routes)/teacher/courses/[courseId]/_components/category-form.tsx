@@ -19,14 +19,14 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
- 
+
 import { Course } from "@prisma/client";
 import { Combobox } from "@/components/ui/combobox";
 
 interface CategoryFormProps {
   initialData: Course;
   courseId: string;
-  options:{label:string, value:string}[]
+  options: { label: string; value: string }[];
 }
 
 const formSchema = z.object({
@@ -46,7 +46,7 @@ export const CategoryForm = ({
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      categoryId: initialData?.categoryId || ""
+      categoryId: initialData?.categoryId || "",
     },
   });
 
@@ -63,8 +63,9 @@ export const CategoryForm = ({
     }
   };
 
-
-  const selectedOption = options.find((option)=>option.value === initialData.categoryId)
+  const selectedOption = options.find(
+    (option) => option.value === initialData.categoryId
+  );
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
@@ -104,9 +105,11 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox options={...options} 
-                    disabled={isSubmitting}
-                    {...field} />
+                    <Combobox
+                      options  = {...options}
+                      disabled = {isSubmitting}
+                       {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

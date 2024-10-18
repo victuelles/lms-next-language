@@ -25,7 +25,7 @@ interface ComboboxProps {
         value:string
     }[]
     value?:string
-    onChange: (value: string )=> void
+    onChange?: (value: string )=> void
 }
 
 export function Combobox({
