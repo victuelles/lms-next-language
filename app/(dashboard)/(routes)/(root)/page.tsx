@@ -7,11 +7,15 @@ import { BannerCard } from "./_components/banner-card";
 import { InfoCard } from "./_components/info-card";
 import { redirect } from "next/navigation";
 
+// Main entry to the APP
+// TODO: Copy (marketing) route from Lingo Insurance
+// that should be the landing page
+
 const Dashboard = async() => {
     const { userId } = auth();
 
     if (!userId) {
-      return redirect("/");
+      return redirect("/sign-in");
     }
   
     const {
@@ -27,8 +31,7 @@ const Dashboard = async() => {
             label="Welcome to the dashboard"
             description={`This is where you can see your progress 
             and continue your courses. This is a demonstration LMS and as such, all courses are free and Stripe is in test
-             mode. To enroll in a course, enter dummy data in the Stripe form. Contact me from
-             folio.kendev.co to obtain admin access`}
+             mode. To enroll in a course, enter dummy data in the Stripe form. Go to www.TalkFilipino.com sign-in using your google email address `}
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
