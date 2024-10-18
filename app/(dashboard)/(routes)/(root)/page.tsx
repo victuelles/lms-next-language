@@ -5,6 +5,7 @@ import { CoursesList } from "@/components/courses-list";
 
 import { BannerCard } from "./_components/banner-card";
 import { InfoCard } from "./_components/info-card";
+import { redirect } from "next/navigation";
 
 const Dashboard = async() => {
     const { userId } = auth();
