@@ -7,10 +7,10 @@ export const Logo = () => {
         <>
             <Link href="/">
                 <Image
-                    src={"/logo.svg"}
+                    src={"/logo.png"}
                     alt="Logo"
-                    width={60}
-                    height={60}
+                    width={200}
+                    height={160}
                 />
             </Link>
         </>
