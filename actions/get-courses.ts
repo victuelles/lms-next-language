@@ -17,9 +17,9 @@ export const getCourses = async ({
   categoryId,
 }: GetCourses): Promise<CourseWithProgressWithCategory[]> => {
   try {
-    console.log("userId",userId)
-    console.log("categoryId",categoryId)
-    console.log("title",title)
+    // console.log("userId",userId)
+    // console.log("categoryId",categoryId)
+    // console.log("title",title)
     const courses = await db.course.findMany({
       where: {
         isPublished: true,
