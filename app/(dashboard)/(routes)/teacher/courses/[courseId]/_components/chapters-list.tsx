@@ -56,7 +56,7 @@ const ChaptersList = ({ items, onReorder, onEdit }: ChaptersListProps) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId="=" chapters>
+      <Droppable droppableId="chapters">
         {(provided) => (
           <div {...provided.droppableProps} ref={provided.innerRef}>
             {chapters.map((chapter, index) => (
