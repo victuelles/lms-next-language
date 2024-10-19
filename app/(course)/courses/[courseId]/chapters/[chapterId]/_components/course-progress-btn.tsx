@@ -58,7 +58,7 @@ export const CourseProgressButton = ({
     <Button
       onClick={onClick}
       disabled={isLoading}
-      type="button"
+      type="button" 
       variant={isCompleted ? "outline" : "success"}
       className="w-full md:w-auto"
     >
