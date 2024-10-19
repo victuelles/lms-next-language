@@ -1,4 +1,4 @@
-import { Chapter, Course, UserProgress, Profile } from "@prisma/client"
+import { Chapter, Course, UserProgress } from "@prisma/client"
 
   import   NavbarRoutes  from "@/components/navbar-routes";
 
@@ -12,14 +12,14 @@ interface CourseNavbarProps {
     })[];
   };
   progressCount: number;
-  currentProfile?: SafeProfile | null;
+ // currentProfile?: SafeProfile | null;
 };
 
 
 export const CourseNavbar = ({
   course,
   progressCount,
-  currentProfile
+  // currentProfile
 }: CourseNavbarProps) => {
 
   return (
@@ -29,7 +29,8 @@ export const CourseNavbar = ({
           course={course}
           progressCount={progressCount}
         />    
-        <NavbarRoutes currentProfile={currentProfile} />    
+        {/* <NavbarRoutes currentProfile={currentProfile} />     */}
+        <NavbarRoutes  />    
       </div>
 
   )
