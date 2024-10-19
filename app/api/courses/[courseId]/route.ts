@@ -40,7 +40,7 @@ export async function DELETE(
         for (const chapter of course.chapters){
             if(chapter.muxData?.assetId){
                 try {
-                    await mux.video.assets.delete(chapter.assetId)
+                    await mux.video.assets.delete(chapter.muxData.assetId)
                 } catch (error) {
                     console.log("[Mux asset delete]", error);
                 }
