@@ -44,7 +44,7 @@ export const getDashboardCourses = async (userId: string): Promise<DashboardCour
         // Handle completed and couress in progress
         const completedCourses = courses.filter((course) => course.progress === 100);
         // Handle null progress
-        const coursesInProgress = courses.filter((course) => course.progress < 100);
+        const coursesInProgress = courses.filter((course) => course.progress ?? 0);
         console.log("completedCourses =",completedCourses.length)
         console.log("coursesInProgress =",coursesInProgress.length)
         return {
