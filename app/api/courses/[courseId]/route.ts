@@ -17,10 +17,12 @@ export async function DELETE(
         const { userId } =  auth()
         const {courseId} = params;
 
+        if(!userId) return new NextResponse("Unauthorized", { status: 401 })
+
         const course = await db.course.findUnique({
             where:{
                 id:courseId,
-                userId:userId
+                userId
             },
             include:{
                 chapters:{
