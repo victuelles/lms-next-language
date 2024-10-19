@@ -108,7 +108,7 @@ export const CategoryForm = ({
                     <Combobox
                       options  = {...options}
                       disabled = {isSubmitting}
-                       {...field}
+                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
