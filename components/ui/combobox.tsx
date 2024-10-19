@@ -21,7 +21,7 @@ import {
 interface ComboboxProps {
   options: { label: string; value: string }[];
   value?: string;
-  onChang: (value: string) => void;
+  onChange: (value: string) => void;
 };
 
 export const Combobox = ({
