@@ -9,7 +9,6 @@ import {
 } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { split } from "postcss/lib/list";
 
 interface CategoryItemProps {
   label: string;
@@ -39,10 +38,8 @@ export const CategoryItem = ({
         categoryId: isSelected ? null : value,
       }
     }, { skipNull: true, skipEmptyString: true });
-    const newUrl=split(url,"?")
-    console.log("newUr",newUrl)
-    console.log("url",url)
-    router.push("/search?"+newUrl[1]);
+
+    router.push(url);
   };
 
   return (

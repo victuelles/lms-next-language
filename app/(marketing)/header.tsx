@@ -30,7 +30,8 @@ export const Header = () => {
           <SignedOut>
             <SignInButton
               mode="modal"
-              
+          
+           
             >
               <Button size="lg" variant="ghost">
                 Login

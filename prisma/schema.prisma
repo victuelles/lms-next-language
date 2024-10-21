@@ -55,6 +55,8 @@ model Course {
 model Category {
   id        String     @id @default(uuid())
   name      String
+  description String? @db.Text
+  imageSrc  String   
   courses   Course[]
 
   createdAt DateTime   @default(now())

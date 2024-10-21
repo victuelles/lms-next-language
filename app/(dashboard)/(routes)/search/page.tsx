@@ -35,7 +35,8 @@ const SearchPage = async ({
     ...searchParams,
   });
 
-  console.log("courses",courses)
+  console.log("Search page  ...searchParams", searchParams)
+  console.log("Search page courses",courses.length)
   return (
     <>
       <div className="px-6 pt-6 md:hidden md:mb-0 block">
