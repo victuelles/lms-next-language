@@ -11,7 +11,7 @@ interface CategoriesProps {
 export const List = ({ items }: CategoriesProps) => {
   const router = useRouter();
  
-  const onClick = (id: string,title:string) => {
+  const onClick = (id: string, title:string) => {
     return router.push(`/category?categoryId=${id}&title=${title}`)
   }
 
