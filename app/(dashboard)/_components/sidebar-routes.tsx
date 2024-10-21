@@ -5,7 +5,7 @@ import SidebarItem from "./sidebar-item";
 import { usePathname } from "next/navigation";
 
 const guestRoutes = [
-  { icon: Layout, label: "Dashboard", href: "/" },
+  { icon: Layout, label: "Dashboard", href: "/home" },
   { icon: Compass, label: "Browse", href: "/search" },
 ];
 

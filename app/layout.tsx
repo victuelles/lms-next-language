@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Nunito } from "next/font/google";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
@@ -7,7 +8,7 @@ import "./globals.css";
 import ToastProvider from "@/components/providers/toaster-provider";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
 
-
+const font = Nunito({ subsets: ["latin"] });
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -30,31 +31,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
     <ClerkProvider
-        appearance={{
-          variables: { colorPrimary: "#000000" },
-          elements: {
-            formButtonPrimary:
-              "bg-black border border-black border-solid hover:bg-white hover:text-black",
-            socialButtonsBlockButton:
-              "bg-white border-gray-200 hover:bg-transparent hover:border-black text-gray-600 hover:text-black",
-            socialButtonsBlockButtonText: "font-semibold",
-            formButtonReset:
-              "bg-white border border-solid border-gray-200 hover:bg-transparent hover:border-black text-gray-500 hover:text-black",
-            membersPageInviteButton:
-              "bg-black border border-black border-solid hover:bg-white hover:text-black",
-            card: "bg-[#fafafa]",
-          },
-        }}
-      >
-      <body  className={`min-h-screen flex flex-col antialiased`}>
+    appearance={{
+      variables: { colorPrimary: "#000000" },
+      elements: {
+        formButtonPrimary:
+          "bg-black border border-black border-solid hover:bg-white hover:text-black",
+        socialButtonsBlockButton:
+          "bg-white border-gray-200 hover:bg-transparent hover:border-black text-gray-600 hover:text-black",
+        socialButtonsBlockButtonText: "font-semibold",
+        formButtonReset:
+          "bg-white border border-solid border-gray-200 hover:bg-transparent hover:border-black text-gray-500 hover:text-black",
+        membersPageInviteButton:
+          "bg-black border border-black border-solid hover:bg-white hover:text-black",
+        card: "bg-[#fafafa]",
+      },
+    }}
+  >
+    <html lang="en">
+
+      <body  className={`min-h-screen flex flex-col antialiased ${font.className}`}>
         <ConfettiProvider/>
         <ToastProvider/>
         {children}
       </body>
-      </ClerkProvider>
+      
     </html>
+    </ClerkProvider>
 
   );
 }
