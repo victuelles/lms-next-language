@@ -27,10 +27,9 @@ export default function Home() {
           </ClerkLoading>
           <ClerkLoaded>
             <SignedOut>
+              
               <SignUpButton
-                mode="modal"
-                afterSignInUrl="/home"
-                afterSignUpUrl="/home"
+                mode="modal"              
               >
                 <Button size="lg" variant="secondary" className="w-full">
                   Get Started
@@ -38,8 +37,6 @@ export default function Home() {
               </SignUpButton>
               <SignInButton
                 mode="modal"
-                afterSignInUrl="/home"
-                afterSignUpUrl="/home"
               >
                 <Button size="lg" variant="primaryOutline" className="w-full">
                   I already have an account
