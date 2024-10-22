@@ -17,6 +17,9 @@ const Dashboard = async () => {
     return redirect("/sign-in");
   }
   const categories = await db.category.findMany({
+    where:{
+      isPublished:true,
+    },
     orderBy: {
       name: "asc",
     },
