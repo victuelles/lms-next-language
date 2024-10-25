@@ -4,6 +4,7 @@ import { Nunito } from "next/font/google";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import ToastProvider from "@/components/providers/toaster-provider";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body  className={`min-h-screen flex flex-col antialiased ${font.className}`}>
+      <GoogleAnalytics />
         <ConfettiProvider/>
         <ToastProvider/>
         {children}
