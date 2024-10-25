@@ -4,7 +4,7 @@ import { Nunito } from "next/font/google";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import "./globals.css";
 import ToastProvider from "@/components/providers/toaster-provider";
 import { ConfettiProvider } from "@/components/providers/confetti-provider";
