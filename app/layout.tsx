@@ -23,7 +23,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "TalkFilipino App",
-  description: "(c)Rom 2024",
+  description: "Learn to speak Ilocano, Pangasinan, Ilonggo, Kapampangan, Bicol, Bisaya, Tagalog, Hiligaynon, Cebuano, and other foreign languages - (c)Rom 2024",
 };
 const ga=process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 export default function RootLayout({
@@ -61,9 +61,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-
       <body  className={`min-h-screen flex flex-col antialiased ${font.className}`}>
-
         <ConfettiProvider/>
         <ToastProvider/>
         {children}
