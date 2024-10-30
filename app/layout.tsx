@@ -22,8 +22,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "TalkFilipino App",
-  description: "Learn to speak Ilocano, Pangasinan, Ilonggo, Kapampangan, Bicol, Bisaya, Tagalog, Hiligaynon, Cebuano, and other foreign languages - (c)Rom 2024",
+  title: "Learn Philippine Languages: Tagalog, Ilocano, Pangasinan, Bisaya, Hiligaynon, Pampango & More",
+  description: "Unlock the beauty of the Philippines' native languages! Master Ilocano, Pangasinan, Bisaya, Hiligaynon, Pampango, and more with interactive lessons and resources - (c)Rom 2024",
 };
 const ga=process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 export default function RootLayout({
