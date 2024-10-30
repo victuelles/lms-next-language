@@ -54,6 +54,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+     
+      <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
+        <div className="flex flex-col items-center gap-y-8">
+          <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
+            Ready to speak like a local? Start learning <b>Tagalog</b> today!
+          </h2>
+        </div>
+        <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-tagalog.jpg"
+              fill
+              alt="Tagalog"
+            />
+          </Link>
+        </div>
+      </div>
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
           <Link href="/sign-in">
@@ -71,23 +88,6 @@ export default function Home() {
           </h2>
         </div>
       </div>
-      <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
-        <div className="flex flex-col items-center gap-y-8">
-          <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-            Ready to speak like a local? Start learning <b>Tagalog</b> today!
-          </h2>
-        </div>
-        <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
-          <Link href="/sign-in">
-            <Image
-              src="/images/course-thumbnails-tagalog.jpg"
-              fill
-              alt="Tagalog"
-            />
-          </Link>
-        </div>
-      </div>
-
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
