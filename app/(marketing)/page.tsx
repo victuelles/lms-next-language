@@ -20,7 +20,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center gap-y-8">
           <h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-[480px] text-center">
-          Explore the rich linguistic tapestry of the Philippines with our language courses!
+            Explore the rich linguistic tapestry of the Philippines with our
+            language courses!
           </h1>
           <div className="flex flex-col items-center gap-y-3 max-w-[330px] w-full">
             <ClerkLoading>
@@ -56,50 +57,66 @@ export default function Home() {
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-          Ready to speak like a local? Start learning <b>Tagalog</b> today!
+            Ready to speak like a local? Start learning <b>Tagalog</b> today!
           </h2>
         </div>
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
-        <Link href="/sign-in">
-          <Image src="/images/course-thumbnails-tagalog.jpg" fill alt="Tagalog" />
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-tagalog.jpg"
+              fill
+              alt="Tagalog"
+            />
           </Link>
         </div>
       </div>
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
-
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
-            <Link href="/sign-in">
-          <Image src="/images/course-thumbnails-ilocano.jpg" fill alt="Ilocano" />
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-ilocano.jpg"
+              fill
+              alt="Ilocano"
+            />
           </Link>
         </div>
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-           Speak the rhythmic tones of <b>Ilocano</b> and open doors to new cultural experiences.
+            Speak the rhythmic tones of <b>Ilocano</b> and open doors to new
+            cultural experiences.
           </h2>
         </div>
       </div>
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-          Speak like a Pangasinense, learn <b>Pangasinan</b> today!
+            Speak like a Pangasinense, learn <b>Pangasinan</b> today!
           </h2>
         </div>
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
-        <Link href="/sign-in">
-          <Image src="/images/course-thumbnails-pangasinan.jpg" fill alt="Pangasinan" />
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-pangasinan.jpg"
+              fill
+              alt="Pangasinan"
+            />
           </Link>
         </div>
       </div>
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
-
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
-        <Link href="/sign-in">
-          <Image src="/images/course-thumbnails-pampango.jpg" fill alt="Pampango" />
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-pampango.jpg"
+              fill
+              alt="Pampango"
+            />
           </Link>
         </div>
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-           Learn  <b>Pampango</b> the Gateway language to Central Luzon’s Culture,
+            Learn <b>Pampango</b> the Gateway language to Central Luzon’s
+            Culture,
           </h2>
         </div>
       </div>
