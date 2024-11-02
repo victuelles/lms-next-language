@@ -91,7 +91,7 @@ export default function Home() {
       <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
         <div className="flex flex-col items-center gap-y-8">
           <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
-            Speak like a Pangasinense, learn <b>Pangasinan</b> today!
+            Speak like a Pangasinense, explore the hundred islands and bangus festival, learn <b>Pangasinan</b> today!
           </h2>
         </div>
         <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
@@ -121,6 +121,58 @@ export default function Home() {
           </h2>
         </div>
       </div>
+
+      <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
+        <div className="flex flex-col items-center gap-y-8">
+          <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
+          <b>Hiligaynon</b> is the language and culture of the Ilonggo people. Learning Hiligaynon can help you connect with the culture of these people.
+          </h2>
+        </div>
+        <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-ilonggo.jpg"
+              fill
+              alt="Ilonggo/Hiligaynon"
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
+        <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-bisaya.jpg"
+              fill
+              alt="Bisaya"
+            />
+          </Link>
+        </div>
+        <div className="flex flex-col items-center gap-y-8">
+          <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
+          <b>Bisaya</b> is the primary language for preserving the wisdom and heritage of the Cebuano people. 
+          </h2>
+        </div>
+      </div>
+
+      <div className="max-w-[988px] mx-auto flex-1 w-full flex flex-col lg:flex-row items-center justify-center p-4 gap-2">
+        <div className="flex flex-col items-center gap-y-8">
+          <h2 className="text-md lg:text-xl  text-neutral-700 max-w-[480px] text-center p-2">
+          <b>Bikol</b> is the primary language of the Bicol Region in the Philippines, and learning it can help you understand the local culture.
+
+          </h2>
+        </div>
+        <div className="relative w-[340px] h-[191px] lg:w-[424px] lg:h-[239px] mb-8 lg:mb-0">
+          <Link href="/sign-in">
+            <Image
+              src="/images/course-thumbnails-bikol.jpg"
+              fill
+              alt="Bikol"
+            />
+          </Link>
+        </div>
+      </div>
+      
     </div>
   );
 }
